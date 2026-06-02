@@ -1,8 +1,154 @@
 {
   "repo_notes": [
     {
-      "content": "此代码仓库的 documents/ 文件夹包含主要论文内容,在编写文档时应优先处理",
-      "author": "1Dreamer666"
+      "content": "请使用中文详尽地为本项目建立索引，并生成包含架构图、源文件链接和代码库摘要的 wiki。"
+    }
+  ],
+  "pages": [
+    {
+      "title": "仓库概览",
+      "purpose": "对 Deepseek_paper_zh 仓库的高层次介绍：其作为两篇 DeepSeek 研究论文中文翻译项目的目标、目录布局以及如何浏览内容。并链接到每篇论文的子页面和支持基础设施。",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "仓库结构与布局",
+      "purpose": "详细解析仓库的目录结构：`docments/` 文件夹（LaTeX 源文件、编译后的 PDF、SyncTeX 产物），`figures/` 文件夹（分布于两篇论文的 25 张 PNG 图表），以及 `.devin/` 元数据配置。说明了命名约定（例如，中文翻译使用 `_zh` 后缀，`synctex.gz` 构建产物）以及基于 LaTeX 的排版工作流程。",
+      "parent": "仓库概览",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "许可证与贡献指南",
+      "purpose": "涵盖管理本仓库的 GNU 通用公共许可证 v3（GPL-3.0）：其许可的行为（重新分发、修改），其要求（提供对应源代码、用户产品的安装信息），以及贡献者应如何将许可证头部应用于新文件。包括与任何复刻或扩展翻译相关的著佐权（copyleft）和专利授权条款。",
+      "parent": "仓库概览",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek-V4 论文",
+      "purpose": "本仓库所涵盖的 DeepSeek-V4 研究论文概览，概述模型系列（V4-Pro 和 V4-Flash）、关键架构创新，以及原始英文 PDF 与中文译文之间的关系。提供子页面链接，分别详述架构细节、训练基础设施和图表。",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek-V4 模型架构",
+      "purpose": "深入剖析 DeepSeek-V4 的核心架构组件：具有 KV 缓存压缩的多头潜在注意力（MLA）、DeepSeekMoE 层（共享专家与路由专家、无辅助损失的负载均衡）、多 Token 预测（MTP）模块，以及支持 100 万 Token 上下文窗口的混合注意力机制（CSA 和 HCA）。涵盖模型变体：V4-Pro（1.6 万亿参数，490 亿激活参数）和 V4-Flash（2840 亿参数，130 亿激活参数）。",
+      "parent": "DeepSeek-V4 论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek-V4 训练基础设施",
+      "purpose": "涵盖 DeepSeek-V4 论文中描述的训练系统与优化：FP8 混合精度训练、DualPipe 流水线并行算法、用于重叠专家并行通信的 MegaMoE 融合 CUDA 内核、Muon 优化器、FP4 量化感知训练（QAT）以及用于内核开发的 TileLang 领域特定语言。还涉及后训练阶段：GRPO 强化学习、在线策略蒸馏（OPD），以及基于预写日志的容错 rollout。",
+      "parent": "DeepSeek-V4 论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek-V4 图表索引",
+      "purpose": "DeepSeek-V4 论文及其中文译文中使用的 15 张图（figures/DeepSeek_V4_fig01.png 至 fig15.png）的目录。描述每张图所阐释的内容——架构图、训练曲线、基准对比、MoE 路由可视化——以及它们如何对应 `docments/DeepSeek_V4_zh.tex` 中 LaTeX 源文件的章节。",
+      "parent": "DeepSeek-V4 论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "《以视觉基元进行思考》论文",
+      "purpose": "《以视觉基元进行思考》研究论文概览：旨在通过将边界框和点提升为第一性推理单元，弥合多模态大语言模型中的指代鸿沟；介绍 DeepSeek-V4-Flash 骨干网络，以及原始英文 PDF 与中文译文的关系。提供子页面链接，分别详述多模态大语言模型架构、训练流水线和图表。",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "视觉基元多模态大语言模型架构",
+      "purpose": "详细阐述论文中描述的多模态架构：DeepSeek-V4-Flash 大语言模型骨干（总参数 2840 亿 / 激活 130 亿的 MoE），支持任意分辨率的 DeepSeek-ViT 视觉编码器，视觉基元 Token 格式（`<|ref|>`、`<|box|>`、`<|point|>`），多阶段视觉 Token 压缩流水线（3×3 空间池化 → CSA → 7056 倍压缩比），以及对象-属性-关系（OAR）映射范式。",
+      "parent": "《以视觉基元进行思考》论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "视觉基元训练流水线",
+      "purpose": "涵盖多阶段训练方法：在 4000 万+ 样本上进行预训练以实现视觉基元 Token 对齐；针对定位（F_TWG）和指向（F_TWP）专家的专门监督微调；使用格式奖励模型和质量奖励模型的 GRPO 强化学习；针对迷宫导航和路径追踪的任务特定奖励模型；统一 RFT 聚合；以及通过在线策略蒸馏（OPD）将多专家合并为单一模型。还涉及合成数据生成（DFS/Prim/Kruskal 迷宫、贝塞尔路径追踪、计数分解）。",
+      "parent": "《以视觉基元进行思考》论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "《以视觉基元进行思考》图表索引",
+      "purpose": "该论文及其中文译文使用的 10 张图（figures/Thinking_with_Visual_Primitives_fig01.png 至 fig10.png）的目录。描述每张图所阐释的内容——指代鸿沟概念、视觉基元 Token 交织、压缩流水线、训练阶段图、基准测试结果以及任务示例（迷宫、路径追踪、计数）——以及它们如何对应 `docments/Thinking_with_Visual_Primitives_zh.tex` 的章节。",
+      "parent": "《以视觉基元进行思考》论文",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "LaTeX 翻译工作流程",
+      "purpose": "阐述生成中文翻译 PDF 的端到端工作流程：LaTeX 源文件（`_zh.tex`）、编译工具链（使用 XeLaTeX 与 xeCJK 支持中日韩字符）、SyncTeX 同步系统（`.synctex.gz` 文件）实现编辑器与 PDF 阅读器之间的正向/反向搜索，以及如何引用 `figures/` 中的图表。涵盖如何在本地构建文档以及 `docments/` 目录的组织方式。",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "LaTeX 源文件与结构",
+      "purpose": "详细介绍两个 LaTeX 翻译源文件的内部结构：`docments/DeepSeek_V4_zh.tex` 和 `docments/Thinking_with_Visual_Primitives_zh.tex`。涵盖文档类选择、中日韩字体配置、与原始论文一致的章节组织、数学符号惯例、引用 `figures/*.png` 的插图命令，以及任何自定义宏或使用的宏包。",
+      "parent": "LaTeX 翻译工作流程",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "SyncTeX 构建产物",
+      "purpose": "解释 `.synctex.gz` 文件（`docments/DeepSeek_V4_zh.synctex.gz` 和 `docments/Thinking_with_Visual_Primitives_zh.synctex.gz`）作为 LaTeX 编译产物的作用。涵盖 SyncTeX 协议（版本 1 格式）、GZIP 压缩层、内部数据结构（头部、输入记录、vbox/hbox 内容树、后记），以及 PDF 查看器（Evince、SumatraPDF、Okular）和编辑器（VS Code LaTeX Workshop、TeXstudio）如何利用这些文件进行正向和反向搜索。",
+      "parent": "LaTeX 翻译工作流程",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "术语表",
+      "purpose": "定义新入职工程师或译者需要了解的所有代码库特有术语、模型架构术语、LaTeX 工具链缩写以及领域概念。每个条目包含指向相关文件及行范围的代码指针。",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
     }
   ]
 }
