@@ -1,1 +1,13 @@
 /.claude
+*.log
+*.synctex.gz
+*.aux
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.ind
+*.ilg
+*.idx
